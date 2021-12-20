@@ -10,7 +10,7 @@
          style="background-image: url('@backgroundImage')">
     <div class="section__hero-content">
         <h1>@Model.HeroHeader</h1>
-        <p class="section__description">@Model.HeroDescription</p>
+        <!-- <p class="section__description">@Model.HeroDescription</p> -->
         @if (Model.HeroCtalink != null)
         {
             <a class="button button--border--solid" href="@Model.HeroCtalink.Url()">
@@ -32,8 +32,11 @@
 
             <div class="ta-center">
                 <h2>@Model.FooterHeader</h2>
-                <p class="section__description mw-640 ma-h-auto">@Model.FooterDescription</p>
-
+                <div> @{
+                    var imagen_footer = Model.Value<IEnumerable<IPublishedContent>>("logo_footer");
+                    foreach(var item in imagen_footer)
+                    {<img src="@item.MediaUrl()"/img>}
+                } </div>
                 <a class="button button--border--light_solid" href="@Model.FooterCtalink.Url()">
                     @Model.FooterCtacaption
                 </a>
