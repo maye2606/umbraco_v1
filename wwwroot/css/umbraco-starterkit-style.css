@@ -1086,7 +1086,7 @@ body.theme-color-water--active.nav-link:visited, body.theme-color-water .border-
 }
 
 .product-grid__item:hover body.theme-color-sun .product-grid__item__name, .product-grid__item:hover body.theme-color-sun .product-grid__item__price, body.theme-color-sun .bg-main-color, body.theme-color-sun .button--border--solid, body.theme-color-sun .mobile-nav, body.theme-color-sun .product-grid__item:hover .product-grid__item__name, body.theme-color-sun .product-grid__item:hover .product-grid__item__price, body.theme-color-sun .section--themed {
-    background-color: #f8ea88;
+    background-color: #fff;
     color: #000
 }
 
@@ -1345,15 +1345,15 @@ body.frontpage .header:not(.header--fixed) .nav-link--home__text:after {
 }
 
 body.frontpage .header:not(.header--fixed) .nav-link {
-    color: #fff
+    color:#000000;
 }
 
     body.frontpage .header:not(.header--fixed) .nav-link--active, body.frontpage .header:not(.header--fixed) .nav-link:hover {
-        border-bottom-color: #fff
+        border-bottom-color: #c50e0e
     }
 
 body.frontpage .header:not(.header--fixed) .hamburger span, body.frontpage .header:not(.header--fixed) .hamburger span:after, body.frontpage .header:not(.header--fixed) .hamburger span:before {
-    background-color: #fff
+    background-color:#c50e0e
 }
 
 body.fixed .top-nav.-open {
@@ -1500,9 +1500,64 @@ a.nav-link.nav-link--black {
 .section--thick-border {
     border: 20px solid #fff
 }
+.search-home {
+    border-radius: 7px;
+    background-color: #eeeeee;
+    padding: 2px;
+    border: none;
+    margin-left: 110px;
+}
+.search {
+    float: left;
+    position: absolute;
+    left:500px;
+    margin: -300px;
+}
+.btn-search {
+    padding: 2px;
+    border-radius: 2px 40px 40px 2px;
+    width: 30px;
+    height: 23px;
+    border:none;
+    background-color: red;
+}
+.icon_search {
+    background-color: #fff;
+}
+.icon_user i{
+    font-size: 40px; 
+    padding-right: 30px;
+    padding:25px;
+}
+.navbar {
+    padding: 0;
+    margin: 0;
+}
+.title_home{
+    padding-right: 143px;
+    margin-top: 100px;
+}
+.container{
+    background-color: #eeeeee;
+}
+.img-slider {
+    width: 500px;
+    height: 408px;
+    padding: 30px;
+    margin-top: 30px;
+}
+.color_red {
+  margin-right: 10px;
+}
+.color_gray {
+    margin-right: 10px;
+}
+.list-group {
+    background-color: red;
+}
 
 body.frontpage .section__hero-content {
-    color: #fff
+    color: #000000
 }
 
 .section__hero-content {
@@ -1536,9 +1591,9 @@ body.frontpage .section__hero-content {
         height: 100%
     }
 
-.overlay--dark:after {
+/* .overlay--dark:after {
     background: rgba(37,33,33,.6)
-}
+} */
 
 .overlay--light:after {
     background: hsla(0,0%,88%,.6)

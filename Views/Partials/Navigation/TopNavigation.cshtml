@@ -2,13 +2,22 @@
 @using Umbraco.Cms.Core.Routing
 @using Umbraco.Extensions
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
-@{
+@{  
     var site = Model.Root();
     var selection = site.Children.Where(x => x.IsVisible());
 }
+<head>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
 <!-- comment out the following line if you want to remove the root node name from the top navigation -->
 <a class="nav-link @Html.Raw(Model.Id == site.Id ? "navi-link--active" : "")" href="@site.Url()">@site.Name</a>
 @foreach (var item in selection)
 {
     <a class="nav-link @(item.IsAncestorOrSelf(Model) ? "nav-link--active" : null)" href="@item.Url()">@item.Name</a>
 }
+<input type="text" class="search-home" placeholder="Search">
+<button class="btn-search" type="button" id="button-addon2"><i class="fa fa-search" style= color:white; aria-hidden="true"></i></button>
+   
+    <div  class="icon_user">
+        <i class="fa fa-user-circle" aria-hidden="true"></i>
+    </div>

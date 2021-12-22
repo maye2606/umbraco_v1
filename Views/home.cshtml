@@ -1,4 +1,6 @@
-﻿
+﻿  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 @using Umbraco.Extensions
 @using Umbraco.Cms.Web.Common.PublishedModels;
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Home>
@@ -8,21 +10,75 @@
 }
 <section class="section section--full-height background-image-full overlay overlay--dark section--content-center section--thick-border"
          style="background-image: url('@backgroundImage')">
-    <div class="section__hero-content">
-        <h1>@Model.HeroHeader</h1>
-        <!-- <p class="section__description">@Model.HeroDescription</p> -->
-        @if (Model.HeroCtalink != null)
-        {
-            <a class="button button--border--solid" href="@Model.HeroCtalink.Url()">
-                @Model.HeroCtacaption
-            </a>
-        }
-    </div>
+         <h1 class="title_home"> Recursos Humanos Inchcape </h1>
+         <!-- <div>
+         <p class="sub_title_home"> Trabajamos para mejorar su bienestar </p>
+         <button type="button" class="btn_home" disabled>Ingresar</button>
+         </div> -->
+          <div class="carousel-item active">
+            <img src="App_plugins/Bergmania.OpenStreetMap/lib/leaflet/images/foto-HR.jpg" class="img-slider" alt="imagen_home">
+          </div>
+         
 </section>
-
+<section class="section section--full-height background-image-full overlay overlay--dark section--content-center section--thick-border"
+         style="background-image: url('@backgroundImage')">
+<div class="color_red">
+    <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action">My Stability and Compensation</a>
+        <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+        <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+        <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+        <a href="#" class="list-group-item list-group-item-action">Vestibulum at eros</a>
+        <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+        <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+        <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+        <a href="#" class="list-group-item list-group-item-action">Vestibulum at eros</a>
+    </div>
+</div>
+<div class="color_gray">
+        <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action">My Safety and Self Care</a>
+        <a href="#" class="list-group-item list-group-item-action">Maltrato Anti- acoso</a>
+        <a href="#" class="list-group-item list-group-item-action">Espacios libres de humo,</a>
+        <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+        <a href="#" class="list-group-item list-group-item-action">Vestibulum at eros</a>
+        <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+        <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+        <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+        <a href="#" class="list-group-item list-group-item-action">Vestibulum at eros</a>
+    </div>
+</div>
+<div class="color_red">
+        <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action">My Growth & Purpose</a>
+        <a href="#" class="list-group-item list-group-item-action">My Growth & Purpose</a>
+        <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+        <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+        <a href="#" class="list-group-item list-group-item-action">Vestibulum at eros</a>
+        <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+        <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+        <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+        <a href="#" class="list-group-item list-group-item-action">Vestibulum at eros</a>
+    </div>
+</div>
+<div class="color_gray">
+        <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action">My bonds with others and the Community</a>
+        <a href="#" class="list-group-item list-group-item-action">My bonds with others and the Community</a>
+        <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+        <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+        <a href="#" class="list-group-item list-group-item-action">Vestibulum at eros</a>
+        <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+        <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+        <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+        <a href="#" class="list-group-item list-group-item-action">Vestibulum at eros</a>
+    </div>
+</div>
+</section>
+<!-- 
 <section class="section section">
     @Html.GetGridHtml(Model, "bodyText", "bootstrap3-fluid")
-</section>
+</section> -->
 
 
 <section class="section section--themed">
@@ -32,18 +88,19 @@
 
             <div class="ta-center">
                 <h2>@Model.FooterHeader</h2>
+                <ul class="dropdown-menu">
+                <li><h6 class="dropdown-header">Dropdown header</h6></li>
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                </ul>
                 <div> @{
                     var imagen_footer = Model.Value<IEnumerable<IPublishedContent>>("logo_footer");
                     foreach(var item in imagen_footer)
                     {<img src="@item.MediaUrl()"/img>}
                 } </div>
-                <a class="button button--border--light_solid" href="@Model.FooterCtalink.Url()">
-                    @Model.FooterCtacaption
-                </a>
-
             </div>
 
         </div>
     </div>
-
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </section>
